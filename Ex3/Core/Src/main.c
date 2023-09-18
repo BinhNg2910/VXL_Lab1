@@ -103,7 +103,7 @@ int main(void)
   int count = 0;
   while (1)
   {
-	  if(count == 10){
+	  if(count == 10 || count == 0){
 		  count = 0;
 		  HAL_GPIO_WritePin(RED_2_GPIO_Port, RED_2_Pin, RESET);
 		  HAL_GPIO_WritePin(YELLOW_1_GPIO_Port, YELLOW_1_Pin, RESET);
@@ -125,7 +125,7 @@ int main(void)
 		  HAL_GPIO_WritePin(YELLOW_1_GPIO_Port, YELLOW_1_Pin, SET);
 	  }
 	  count++;
-	  HAL_Delay(500);
+	  HAL_Delay(1000);
 //	  HAL_GPIO_WritePin(RED_1_GPIO_Port, RED_1_Pin, SET);
 //	  HAL_GPIO_WritePin(GREEN_2_GPIO_Port, GREEN_2_Pin, SET);
 //	  HAL_Delay(3000);
